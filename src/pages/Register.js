@@ -12,13 +12,14 @@ const Register = () => {
       setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
     }
   };
-  useMutation({
+  const { mutate } = useMutation({
     mutationKey: ["register"],
     mutationFn: () => register(userInfo),
   });
   const handleFormSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     // Add register logic here
+    mutate();
   };
 
   return (
