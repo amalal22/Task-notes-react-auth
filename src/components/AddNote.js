@@ -46,9 +46,6 @@ const AddNote = ({ show, onClose, onSave }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     addNote();
-    setTitle("");
-    setTopics([]);
-    setBody("");
   };
 
   if (!show) {
